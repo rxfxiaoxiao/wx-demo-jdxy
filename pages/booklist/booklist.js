@@ -9,7 +9,8 @@ Page({
     dataList: {}, // 普通列表数据
     searchkeywordslist: {},
     hotsearchkeywordlist: {},
-    searchDataList: {}
+    searchDataList: {},
+    currentSearchWord: ''
   },
 
   /**
@@ -81,5 +82,30 @@ Page({
   toDetails: function(e) {
     var id = e.currentTarget.dataset && e.currentTarget.dataset.id;
     wx.navigateTo({ url: '../detail/detail?id='+id });
+  },
+  searchAjax: function(e) {
+    
+    var word = e.detail.value;
+    if (word.replace(/(^\s*)|(\s*$)/g, "").length < 1) return;
+
+    wx.request({
+      url: 'http://bl.7yue.pro/v1/book/search?appkey=rT6NqlbzIKUu0NNa',
+      data: {
+        start: 0,
+        count: 20,
+        summary: 0,
+        q: word
+      },
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      success: function (res) {
+       console.log(res);
+      },
+      fail: function () {
+        console.log('失败')
+      }
+    })
+
   }
 })

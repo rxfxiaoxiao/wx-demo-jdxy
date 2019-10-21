@@ -34,7 +34,7 @@
      <view class="search-wrap">
         <view class="search-bar">
           <image src="images/search-icon.png" class="search-icon"></image>
-          <input type="text" placeholder="搜索图书名称" class="search-input"></input>
+          <input type="text" data-search="{{ currentSearchWord }}" placeholder="搜索图书名称" class="search-input" bindconfirm="searchAjax"></input>
           <icon type="clear" class="clear-input" size="30rpx" role="img"></icon>
         </view>
         
