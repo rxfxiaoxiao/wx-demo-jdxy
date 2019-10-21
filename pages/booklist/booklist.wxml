@@ -1,0 +1,92 @@
+
+<!-- 书籍列表 -->
+<view wx:if="{{ search== false }}" class="page-list">
+
+  <!-- 搜索 -->
+  <view class="search-wrap">
+    <input placeholder="搜索图书名称" placeholder-class="search-placeholder" class="search"></input>
+  </view>
+
+  <view class="booklist-wrap">
+    <image src="images/title.png" class="title"></image>
+    <view class="booklist-container">
+
+
+      <view wx:for="{{dataList}}" class="item" data-id="{{ item.id }}" bind:tap="toDetails">
+          <view class="item-image"  style="background-image: url('{{item.image}}')"></view>
+          <view class="item-msg">
+            <text class="item-title">{{ item.title }}</text>
+            <text class="item-name">{{ item.author }}</text>
+            <view class="item-appraise">
+                <text>{{ item.fav_nums }}</text>
+                <text>喜欢</text>
+            </view>
+          </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>
+
+<!-- 搜索栏 -->
+<view wx:if="{{ search== true }}" class="page-search">
+     <view class="search-wrap">
+        <view class="search-bar">
+          <image src="images/search-icon.png" class="search-icon"></image>
+          <input type="text" placeholder="搜索图书名称" class="search-input"></input>
+          <icon type="clear" class="clear-input" size="30rpx" role="img"></icon>
+        </view>
+        
+        <view class="cancel">取消</view>
+     </view> 
+
+      <!-- 关键字搜索 -->
+      <view class="keyword-wrap">
+        <view class="search-word-wrap">
+          <text class="search-tit">历史搜索</text>
+          <view class="search-word-box">
+            <text class="search-word">格林童话</text>
+            <text class="search-word">送你一颗子弹</text>
+            <text class="search-word">格林童话</text>
+            <text class="search-word">听说</text>
+            <text class="search-word">假如真有时光机</text>
+            <text class="search-word">雷雨</text>
+          </view>
+        </view>
+
+        <view class="search-word-wrap">
+          <text class="search-tit">热门搜索</text>
+          <view class="search-word-box">
+            <text class="search-word">格林童话</text>
+            <text class="search-word">送你一颗子弹</text>
+            <text class="search-word">格林童话</text>
+            <text class="search-word">听说</text>
+            <text class="search-word">假如真有时光机</text>
+            <text class="search-word">雷雨</text>
+          </view>
+        </view>
+    
+      </view>
+
+
+      <!-- 搜索后的数据列表 -->
+      <view class="booklist-container">
+        <view wx:for="{{searchDataList}}" class="item" data-id="{{ item.id }}" bind:tap="toDetails">
+            <view class="item-image"  style="background-image: url('{{item.image}}')"></view>
+            <view class="item-msg">
+              <text class="item-title">{{ item.title }}</text>
+              <text class="item-name">{{ item.author }}</text>
+              <view class="item-appraise">
+                  <text>{{ item.fav_nums }}</text>
+                  <text>喜欢</text>
+              </view>
+            </view>
+        </view>
+      </view>
+
+
+</view>
+
+
+

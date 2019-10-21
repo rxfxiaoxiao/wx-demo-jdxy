@@ -1,0 +1,146 @@
+/*  ------------------ 顶部 ------------------ */
+.top-bar {
+  width: 100%;
+  color: #000;
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.top-bar-l {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  
+}
+.top-bar-l .top-txt-1 {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.top-bar-l .top-txt-2 {
+  font-size: 58rpx;
+  line-height: 58rpx;
+  font-weight: bold;
+}
+.top-bar-l .top-txt-3 {
+  font-size: 40rpx;
+  margin: 0 14px;
+  font-weight: bold;
+}
+.top-bar-l .top-txt-4 {
+  display: flex;
+  flex-direction: column;
+}
+.top-bar-l .top-txt-4 text:nth-child(1) {
+  font-size: 24rpx;
+}
+.top-bar-l .top-txt-4 text:nth-child(2) {
+  font-size: 20rpx;
+}
+
+.top-bar-r {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+}
+.top-bar-r .like-icon {
+  width: 32rpx;
+  height: 28rpx;
+  background-position: left top;
+  background-size: 100% auto;
+}
+
+.top-bar-r text {
+  font-size: 18rpx;
+  margin-bottom: 25rpx;
+}
+.top-bar-r .share {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left:40rpx;
+}
+
+
+/* --------------------- banner -------------------- */
+.banner {
+  width: 100%;
+  height: 583rpx;
+}
+.poster-type {
+  width: 46rpx;
+  margin-top: -60rpx;
+  margin-left: 30rpx;
+  display: block;
+}
+.poster-wrap {
+  width: 100%;
+  height: 500rpx;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.music-poster-wrap {
+  width: 100%;
+  height: 500rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+
+
+}
+.music-poster {
+  width: 450rpx;
+  height: 450rpx;
+  margin: 0 auto;
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.play-icon {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60rpx;
+  margin-left: -60rpx;
+  background-size: 100%;
+  background-image: 100% auto;
+}
+/* 内容 */
+.content {
+  padding: 40rpx 82rpx;
+  box-sizing: border-box;
+}
+.content>text {
+  min-height: 208rpx;
+  box-sizing: border-box;
+  color: #0f0f0f;
+  display: block;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  display: block;
+}
+.classify-list {
+  width: 100%;
+  height: 80rpx;
+  background: #f7f7f7;
+  display: flex;
+}
+.classify-list image {
+  width: 23rpx;
+  height: 34rpx;
+  margin: 23rpx 20rpx;
+}
+.classify-list image.disabled {
+  opacity: .5;
+}
+.classify-list text {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 24rpx;
+}

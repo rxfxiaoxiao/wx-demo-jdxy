@@ -1,0 +1,57 @@
+<!-- 顶部 -->
+<view class="top-bar">
+  <view class="top-bar-l">
+    <view class="top-txt-1"> No.</view>
+    <view class="top-txt-2">{{ index }}</view>
+    <view class="top-txt-3">|</view>
+    <view class="top-txt-4">
+      <text>{{ month }}</text>
+      <text>{{ year }}</text> 
+    </view>
+  </view>
+  <view class="top-bar-r">
+    <view class="like-icon" style="{{ like_status==0 ? 'background-image:url(images/like-disactive.png)' : 'background-image:url(images/like-active.png)' }}" bind:tap="tapLike"></view>
+    <text>{{ fav_nums }}</text>
+    <image src="images/share.png" class="share"></image>
+
+  </view>
+</view>
+
+<!-- 图片 -->
+<view class="banner">
+
+  <!-- 电影 -->
+  <view class="movie" wx:if="{{ type==100 }}">
+    <view class="poster-wrap" style="background-image:url({{ image }})">
+
+    </view>
+    <image src="images/type/movies.png" class="poster-type" mode="widthFix"></image>
+  </view>
+
+  <!-- 音乐 -->
+  <view class="music" wx:if="{{ type==200 }}">
+    <view class="music-poster-wrap">
+        <view class="music-poster" style="background-image:url({{ image }})">
+            <view class="play-icon" style="background-image:url({{isPlaying == true ? 'images/play.png':'images/pause.png'}})"></view>
+        </view>    
+    </view>
+    <image src="images/type/music.png" class="poster-type" mode="widthFix"></image>
+  </view>
+
+  <!-- 句子 -->
+  <view class="poem" wx:if="{{ type==300 }}">
+    <view class="poster-wrap" style="background-image:url({{ image }})"></view>
+    <image src="images/type/poem.png" class="poster-type" mode="widthFix"></image>
+  </view>
+
+</view>
+
+<!-- 内容 -->
+<view class="content">
+  <text>{{ content }}</text>
+  <view class="classify-list">
+      <image src="images/prev.png" class="{{ index <= firstDataItem ? 'disabled': '' }}" mode="widthFix" bind:tap="getPrevPeriodical"></image>
+      <text>{{ title }}</text>
+      <image src="images/next.png" class="{{ index >= lastDataItem ? 'disabled': '' }}" mode="widthFix" bind:tap="getNextPeriodical"></image>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/booklist/booklist",
+    "pages/index/index",
+    "pages/like/like",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundColor": "light",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "dark",
+    "navigationBarTitleText": "晓晓",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "text": "流行",
+        "pagePath": "pages/index/index",
+        "iconPath": "common/images/classic.png",
+        "selectedIconPath": "common/images/classic@highlight.png"
+      },
+      {
+        "text": "书单",
+        "pagePath": "pages/booklist/booklist",
+        "iconPath": "common/images/book.png",
+        "selectedIconPath": "common/images/book@highlight.png"
+      },
+      {
+        "text": "喜欢",
+        "pagePath": "pages/like/like",
+        "iconPath": "common/images/my.png",
+        "selectedIconPath": "common/images/my@highlight.png"
+      }
+    ]
+  }
+}
