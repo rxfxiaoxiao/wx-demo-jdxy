@@ -22,7 +22,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
 	"appid": "wxb507aea91454a701",
-	"projectname": "wechat-birthday",
+	"projectname": "wx-demo-jdxy",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
