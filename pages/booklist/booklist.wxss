@@ -10,11 +10,19 @@
   height: 70rpx;
   background-color: #f7f7f7;
   border-radius: 35rpx;
-}
-.page-list .search-placeholder {
   font-size: 28rpx;
+  line-height: 70rpx;
   text-align: center;
+   color: #999
 }
+.page-list .search-icon {
+    width: 28rpx;
+    height: 28rpx;
+    display: inlie-block;
+    margin-right: 10rpx;
+   margin-top: 21rpx;
+}
+
 
 /* 内容 */
 .booklist-wrap{
